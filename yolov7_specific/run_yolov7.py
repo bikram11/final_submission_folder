@@ -1,0 +1,9 @@
+from subprocess import call
+call(["python","yolov7/featuextractor.py", 
+      "--weights", "yolov7.pt", 
+      "--save-txt", 
+      "--temp_feature_dir", "features_checked/test", 
+      "--source", "raw_data/test/camera_images",
+      "--device","cpu"])
+
+# !python detect.py --weights yolov7.pt --img 640 --conf 0.25 --source 'raw_data/test/camera_images'
